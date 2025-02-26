@@ -1,13 +1,15 @@
 package com.example.ATV_Curso.Model;
 
+import java.util.ArrayList;
+
 public class Curso {
   private Long id;
   private String nome;
   private int numeroSala;
-  private ArrayList<Aluno> alunos;
-  private Professor professor;
+  private ArrayList<AlunoMod> alunos;
+  private ProfessorMod professor;
 
-    public Curso(Long id, String nome, int numeroSala, ArrayList<Aluno> alunos, Professor professor) {
+    public Curso(Long id, String nome, int numeroSala, ArrayList<AlunoMod> alunos, ProfessorMod professor) {
         this.id = id;
         this.nome = nome;
         this.numeroSala = numeroSala;
@@ -39,19 +41,19 @@ public class Curso {
         this.numeroSala = numeroSala;
     }
 
-    public ArrayList<Aluno> getAlunos() {
+    public ArrayList<AlunoMod> getAlunos() {
         return alunos;
     }
 
-    public void setAlunos(ArrayList<Aluno> alunos) {
+    public void setAlunos(ArrayList<AlunoMod> alunos) {
         this.alunos = alunos;
     }
 
-    public Professor getProfessor() {
+    public ProfessorMod getProfessor() {
         return professor;
     }
 
-    public void setProfessor(Professor professor) {
+    public void setProfessor(ProfessorMod professor) {
         this.professor = professor;
     }
 }
