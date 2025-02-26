@@ -1,6 +1,7 @@
-package Model;
+package com.example.ATV_Curso.Model;
 
-java.util.ArrayList;
+import java.util.ArrayList;
+
 public class ProfessorMod {
 
     private Long id;

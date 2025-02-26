@@ -1,8 +1,6 @@
-package Model;
+package com.example.ATV_Curso.Model;
 
 import java.util.ArrayList;
-
-java.util.ArrayList;
 
 public class AlunoMod {
 
