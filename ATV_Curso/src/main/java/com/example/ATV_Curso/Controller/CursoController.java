@@ -1,5 +1,7 @@
 package com.example.ATV_Curso.Controller;
 
+import com.example.ATV_Curso.Model.ProfessorMod;
+
 import java.util.List;
 
 public class CursoController {
@@ -43,7 +45,7 @@ public class CursoController {
     }
 
     //Buscar através Professor
-    public List<Curso> getByProfessor(Professor professor){
+    public List<Curso> getByProfessor(ProfessorMod professor){
         return repository.getByProfessor(professor);
     }
 
