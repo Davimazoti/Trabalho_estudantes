@@ -14,40 +14,40 @@ public class CursoController {
     public List<Curso> getAll() {
         return repository.findAll();
     }
-}
 
-//    //Buscar por ID
-//    public Curso getById(Long id){
-//        return repository.getById(id);
-//    }
-//
-//    //Enviar
-//    public boolean insert(Curso curso){
-//        return repository.insert(curso);
-//    }
-//
-//    //Atualizar
-//    public Curso update(Long id, Curso curso){
-//        boolean result = repository.update(id, curso);
-//
-//        if(result) {
-//            return curso;
-//        }
-//        return null;
-//    }
-//
-//    //Delete
-//    public Curso delete(Long id, Curso curso){
-//        boolean result = repository.delete(id);
-//
-//        if (result) {
-//            return curso;
-//
-//        }
-//        return null;
-//    }
-//
-//    //Buscar através Professor
+
+    //Buscar por ID
+    public Curso getById(Long id){
+        return repository.getById(id);
+    }
+
+    //Enviar
+    public boolean insert(Curso curso){
+        return repository.insert(curso);
+    }
+
+    //Atualizar
+    public Curso update(Long id, Curso curso){
+        boolean result = repository.update(id, curso);
+
+        if(result) {
+            return curso;
+        }
+        return null;
+    }
+
+    //Delete
+    public Curso delete(Long id, Curso curso){
+        boolean result = repository.delete(id);
+
+        if (result) {
+            return curso;
+
+        }
+        return null;
+    }
+
+    //Buscar através Professor
 //    public List<Curso> getByProfessor(ProfessorMod professor){
 //        return repository.getByProfessor(professor);
 //    }
@@ -58,5 +58,5 @@ public class CursoController {
 //    }
 //
 //    //Adicionar aluno num curso já existente
-//
-//}
+
+}

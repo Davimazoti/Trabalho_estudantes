@@ -1,6 +1,7 @@
 package com.example.ATV_Curso.Banco;
 
 import com.example.ATV_Curso.Model.Curso;
+import com.example.ATV_Curso.Model.ProfessorMod;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
 import java.util.ArrayList;
@@ -54,6 +55,11 @@ public class CursoBanco {
             return false;
 
         }
+        cursoBanco.setNome(curso.getNome());
+        cursoBanco.setProfessor(curso.getProfessor());
+        cursoBanco.setId(curso.getId());
+        cursoBanco.setAlunos(curso.getAlunos());
+        cursoBanco.setNumeroSala(curso.getNumeroSala());
         return true;
     }
 
