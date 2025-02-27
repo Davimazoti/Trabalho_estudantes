@@ -44,23 +44,29 @@ public class CursoBanco {
     }
 
 
-    public Curso update(Long id, Curso curso){
-        boolean result = cursos.update(id);
+    public boolean update(Long id, Curso curso){
+        Curso cursoBanco = cursos.stream()
+                .filter(f -> f.getId() == id)
+                .findFirst()
+                .orElse(null);
 
-        if(result) {
-            return curso;
+        if (cursoBanco == null){
+            return false;
+
         }
-        return null;
+        return true;
     }
 
-    public Curso delete(Long id, Curso curso){
-        boolean result = cursos.delete(id);
+        public boolean delete(Long id){
+            Curso cursoBanco = cursos.stream()
+                    .filter(f -> f.getId() == id)
+                    .findFirst()
+                    .orElse(null);
 
-        if(result) {
-            return curso;
+            cursos.remove(cursoBanco);
+
+            return true;
         }
-        return null;
-    }
 
 
 
