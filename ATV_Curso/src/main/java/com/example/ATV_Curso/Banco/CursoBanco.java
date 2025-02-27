@@ -38,8 +38,9 @@ public class CursoBanco {
                 .orElse(null);
     }
 
-    public boolean insert(Professor professor){
-        return cursos.insert(professor);
+    public boolean insert(Curso curso){
+        cursos.add(curso);
+        return true;
     }
 
 
