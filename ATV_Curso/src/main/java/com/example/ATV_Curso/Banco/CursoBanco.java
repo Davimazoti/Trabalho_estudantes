@@ -84,6 +84,7 @@ public class CursoBanco {
         return cursos.stream().filter(curso -> curso.getNumeroSala() == numerosala).toList();
     }
 
+    public boolean update()
 
 
 }
