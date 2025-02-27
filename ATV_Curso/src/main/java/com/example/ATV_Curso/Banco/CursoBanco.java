@@ -63,25 +63,28 @@ public class CursoBanco {
         return true;
     }
 
-        public boolean delete(Long id){
-            Curso cursoBanco = cursos.stream()
-                    .filter(f -> f.getId() == id)
-                    .findFirst()
-                    .orElse(null);
+    public boolean delete(Long id){
+        Curso cursoBanco = cursos.stream()
+                .filter(f -> f.getId() == id)
+                .findFirst()
+                .orElse(null);
 
-            cursos.remove(cursoBanco);
+        cursos.remove(cursoBanco);
 
-            return true;
-        }
+        return true;
+    }
 
+    public List<Curso> getByProfessor(String nome){
+        return cursos.stream()
+                .filter(curso -> curso.getProfessor().getNome().equals(nome))
+                .toList();
+    }
 
-
-
-
-
-
-
+    public List<Curso> getByCurso(int numerosala){
+        return cursos.stream().filter(curso -> curso.getNumeroSala() == numerosala).toList();
+    }
 
 
 
 }
+
