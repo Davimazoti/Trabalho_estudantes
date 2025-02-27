@@ -17,15 +17,14 @@ public class CursoView {
     @GetMapping
     public List<Curso> getAll(@RequestParam(required = false) ProfessorMod professorMod,
                               @RequestParam(required = false) Integer numeroSala) {
-        return cursoController.getAll();
 
-//        if (professorMod != null) {
-//            return cursoController.getByProfessor(professorMod);
-//        } else if (numeroSala != null) {
-//            return cursoController.getBySalaAula(numeroSala);
-//        } else {
-//            return cursoController.getAll();
-//        }
+        if (professorMod != null) {
+            return cursoController.getByProfessor(professorMod);
+        } else if (numeroSala != null) {
+            return cursoController.getBySalaAula(numeroSala);
+        } else {
+            return cursoController.getAll();
+        }
     }
 
     @GetMapping("/{id}")
