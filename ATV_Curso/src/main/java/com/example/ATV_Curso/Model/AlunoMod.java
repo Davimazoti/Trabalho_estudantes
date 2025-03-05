@@ -6,9 +6,9 @@ public class AlunoMod {
 
     private Long id;
     private String nome;
-    private ArrayList<Aluno> aluno;
+    private ArrayList<AlunoMod> aluno;
 
-    public AlunoMod(Long id, String nome, ArrayList<Aluno> aluno){
+    public AlunoMod(Long id, String nome, ArrayList<AlunoMod> aluno){
         this.id = id;
         this.nome = nome;
         this.aluno = aluno;
@@ -30,11 +30,11 @@ public class AlunoMod {
         this.nome = nome;
     }
 
-    public ArrayList<Aluno> getAluno() {
+    public ArrayList<AlunoMod> getAluno() {
         return aluno;
     }
 
-    public void setAluno(ArrayList<Aluno> aluno) {
+    public void setAluno(ArrayList<AlunoMod> aluno) {
         this.aluno = aluno;
     }
 }

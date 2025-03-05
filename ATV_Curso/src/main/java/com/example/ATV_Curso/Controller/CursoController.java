@@ -1,15 +1,20 @@
 package com.example.ATV_Curso.Controller;
 
+import com.example.ATV_Curso.Banco.CursoBanco;
+import com.example.ATV_Curso.Model.Curso;
+import com.example.ATV_Curso.Model.ProfessorMod;
+
 import java.util.List;
 
 public class CursoController {
 
-    CursoBd repository = new CursoBd();
+    CursoBanco repository = new CursoBanco();
 
     //Buscar Todos
-    public List<Curso> getAll(){
+    public List<Curso> getAll() {
         return repository.findAll();
     }
+
 
     //Buscar por ID
     public Curso getById(Long id){
@@ -43,15 +48,15 @@ public class CursoController {
     }
 
     //Buscar através Professor
-    public List<Curso> getByProfessor(Professor professor){
-        return repository.getByProfessor(professor);
-    }
-
-    //Buscar através da Sala de Aula
-    public List<Curso> getBySalaAula(int numeroSala){
-        return repository.getBySalaAula(numeroSala);
-    }
-
-    //Adicionar aluno num curso já existente
+//    public List<Curso> getByProfessor(ProfessorMod professor){
+//        return repository.getByProfessor(professor);
+//    }
+//
+//    //Buscar através da Sala de Aula
+//    public List<Curso> getBySalaAula(int numeroSala){
+//        return repository.getBySalaAula(numeroSala);
+//    }
+//
+//    //Adicionar aluno num curso já existente
 
 }
