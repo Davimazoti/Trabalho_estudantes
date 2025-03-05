@@ -15,7 +15,7 @@ public class CursoView {
     CursoController cursoController = new CursoController();
 
     @GetMapping
-    public List<Curso> getAll(@RequestParam(required = false) ProfessorMod professorMod,
+    public List<Curso> getAll(@RequestParam(required = false) String professorMod,
                               @RequestParam(required = false) Integer numeroSala) {
 
         if (professorMod != null) {
