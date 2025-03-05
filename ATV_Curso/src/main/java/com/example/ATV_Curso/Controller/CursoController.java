@@ -48,15 +48,14 @@ public class CursoController {
     }
 
     //Buscar através Professor
-//    public List<Curso> getByProfessor(ProfessorMod professor){
-//        return repository.getByProfessor(professor);
-//    }
-//
-//    //Buscar através da Sala de Aula
-//    public List<Curso> getBySalaAula(int numeroSala){
-//        return repository.getBySalaAula(numeroSala);
-//    }
-//
-//    //Adicionar aluno num curso já existente
+    public List<Curso> getByProfessor(String nome){
+        return repository.getByProfessor(nome);
+    }
+
+    //Buscar através da Sala de Aula
+    public List<Curso> getBySalaAula(int numeroSala){
+        return repository.getByNumeroSala(numeroSala);
+    }
+    //Adicionar aluno num curso já existente
 
 }
